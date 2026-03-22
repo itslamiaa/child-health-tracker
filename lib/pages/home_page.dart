@@ -1,4 +1,5 @@
 import 'package:child_tracker/util/category_card.dart';
+import 'package:child_tracker/util/doctor_card.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,6 +13,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: Colors.grey[100],
       body: SafeArea(
         // safeArea makes text be visible not too high
@@ -174,27 +176,39 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Doctor List', style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),
-                  Text('See all', style: TextStyle(fontSize: 16,color:Colors.grey[500],fontWeight: FontWeight.bold)),
+                  Text(
+                    'Doctor List',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'See all',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.grey[500],
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ],
               ),
             ),
 
-            SizedBox(height: 25,),
+            SizedBox(height: 25),
 
-            Container(child:Column(
-              children: [
-              // picture of doc
-              Image.asset(name)
 
-              // rating
-
-              //doc name
-
-              // doc title
-
-            ],),
-            )
+            Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      DoctorCard(),
+                      DoctorCard(),
+                      DoctorCard(),
+                    ],
+                  ),
+                )
+            ),
+            SizedBox(height: 50,)
           ],
         ),
       ),
