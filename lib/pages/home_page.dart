@@ -67,8 +67,8 @@ class _HomePageState extends State<HomePage> {
                 // split in two
                 padding: EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                    color: Colors.pink[100],
-                  borderRadius: BorderRadius.circular(12)
+                  color: Colors.pink[100],
+                  borderRadius: BorderRadius.circular(12),
                 ),
                 child: Row(
                   children: [
@@ -88,22 +88,32 @@ class _HomePageState extends State<HomePage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('How do you feel?',
+                          Text(
+                            'How do you feel?',
                             style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16),),
-                          SizedBox(height: 12,),
-                          Text('Fill out your medical card right now',
-                              style: TextStyle(
-                              fontSize: 15)),
-                          SizedBox(height: 12,),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
+                          ),
+                          SizedBox(height: 12),
+                          Text(
+                            'Fill out your medical card right now',
+                            style: TextStyle(fontSize: 15),
+                          ),
+                          SizedBox(height: 12),
                           Container(
                             padding: EdgeInsets.all(12),
-                              decoration: BoxDecoration(
-                                color: Colors.deepPurple[300],
-                                borderRadius: BorderRadius.circular(12)
+                            decoration: BoxDecoration(
+                              color: Colors.deepPurple[300],
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'Get started',
+                                style: TextStyle(color: Colors.white),
                               ),
-                                  child: Center(child: Text('Get started',style: TextStyle(color: Colors.white),))),
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -112,19 +122,18 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
 
-            SizedBox(height: 25,),
-            // search bar
+            SizedBox(height: 25),
 
+            // search bar
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Container(
                 padding: EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   color: Colors.deepPurple[200],
-                  borderRadius: BorderRadius.circular(12)
+                  borderRadius: BorderRadius.circular(12),
                 ),
                 child: TextField(
-
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.search),
                     border: InputBorder.none,
@@ -134,22 +143,58 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
 
-            SizedBox(height: 25,),
+            SizedBox(height: 25),
             //categories
             Container(
               height: 80,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  CategoryCard(iconPath: 'assets/icons/home.png',categoryName: 'Home'),
-                  CategoryCard(iconPath: 'assets/icons/add.png', categoryName: 'Add child'),
-                  CategoryCard(iconPath: 'assets/icons/settings.png', categoryName: 'settings')
-              ],),
-            )
+                  CategoryCard(
+                    iconPath: 'assets/icons/home.png',
+                    categoryName: 'Home',
+                  ),
+                  CategoryCard(
+                    iconPath: 'assets/icons/add.png',
+                    categoryName: 'Add child',
+                  ),
+                  CategoryCard(
+                    iconPath: 'assets/icons/settings.png',
+                    categoryName: 'settings',
+                  ),
+                ],
+              ),
+            ),
 
-
+            SizedBox(height: 25),
 
             //another cards  doctor list
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Doctor List', style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),
+                  Text('See all', style: TextStyle(fontSize: 16,color:Colors.grey[500],fontWeight: FontWeight.bold)),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 25,),
+
+            Container(child:Column(
+              children: [
+              // picture of doc
+              Image.asset(name)
+
+              // rating
+
+              //doc name
+
+              // doc title
+
+            ],),
+            )
           ],
         ),
       ),
