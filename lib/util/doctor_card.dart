@@ -17,7 +17,7 @@ class DoctorCard extends StatelessWidget {
             // picture of doc
             ClipRRect(
                 borderRadius: BorderRadius.circular(10),
-                child: Image.asset('assets/images/calendar.png',height: 100,)),
+                child: Image.asset('assets/images/Dante.jpg',height: 100,)),
             SizedBox(height: 10,),
             // rating
             Row(children: [

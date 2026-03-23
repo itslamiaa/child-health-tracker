@@ -190,9 +190,10 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+            SizedBox(height: 12,),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                padding: const EdgeInsets.symmetric(horizontal: 1.0),
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [DoctorCard(), DoctorCard(), DoctorCard()],
