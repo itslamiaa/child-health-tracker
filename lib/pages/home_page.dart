@@ -13,7 +13,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Colors.grey[100],
       body: SafeArea(
         // safeArea makes text be visible not too high
@@ -191,24 +190,16 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-
-            SizedBox(height: 25),
-
-
             Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      DoctorCard(),
-                      DoctorCard(),
-                      DoctorCard(),
-                    ],
-                  ),
-                )
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [DoctorCard(), DoctorCard(), DoctorCard()],
+                ),
+              ),
             ),
-            SizedBox(height: 50,)
+            SizedBox(height: 50),
           ],
         ),
       ),
