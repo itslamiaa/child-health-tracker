@@ -1,3 +1,5 @@
+import 'package:child_tracker/pages/login.dart';
+import 'package:child_tracker/pages/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -40,50 +42,74 @@ class Welcome extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 55,),
+              SizedBox(height: 55),
               // another image
-              Image.asset('assets/images/smiley.jpg',height: 250,),
+              Image.asset('assets/images/smiley.jpg', height: 250),
 
-              SizedBox(height: 75,),
+              SizedBox(height: 75),
+
               // signup button
-
               Opacity(
                 opacity: 0.70,
-                child: Container(
-                  alignment: Alignment(0, 0),
-                  width: 200,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    color: Colors.blue[100]
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (c) => // the arrow plays as a return
+                            Signup(), // i can name c or whatever the fuck i want bitches
+                      ),
+                    );
+                  },
+                  child: Container(
+                    alignment: Alignment(0, 0),
+                    width: 200,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.blue[100],
+                    ),
+                    child: Text(
+                      'Sign Up',
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(fontSize: 20),
+                      ),
+                    ),
                   ),
-                  child: Text('Sign Up',style: GoogleFonts.poppins(
-                    textStyle: TextStyle(fontSize: 20),
-                  )),
-
                 ),
               ),
 
-              SizedBox(height: 25,),
+              SizedBox(height: 25),
               // login button
               Opacity(
                 opacity: 0.70,
-                child: Container(
-                  alignment: Alignment(0, 0),
-                  width: 200,
-                  height: 50,
-                  decoration: BoxDecoration(
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (c) => // the arrow plays as a return
+                        Login(), // i can name c or whatever the fuck i want bitches
+                      ),
+                    );
+                  },
+                  child: Container(
+                    alignment: Alignment(0, 0),
+                    width: 200,
+                    height: 50,
+                    decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.pink[100]
+                      color: Colors.pink[100],
+                    ),
+                    child: Text(
+                      'Login',
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(fontSize: 20),
+                      ),
+                    ),
                   ),
-                  child: Text('Login',style: GoogleFonts.poppins(
-                    textStyle: TextStyle(fontSize: 20),
-                  )),
-
                 ),
               ),
-
-
             ],
           ),
         ),

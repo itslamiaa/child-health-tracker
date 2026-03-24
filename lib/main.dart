@@ -1,5 +1,5 @@
-import 'package:child_tracker/onboarding_screen.dart';
-import 'package:child_tracker/pages/home_page.dart';
+//import 'package:child_tracker/onboarding_screen.dart';
+//import 'package:child_tracker/pages/home_page.dart';
 import 'package:child_tracker/pages/welcome.dart';
 import 'package:flutter/material.dart';
 
