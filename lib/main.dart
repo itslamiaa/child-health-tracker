@@ -1,5 +1,6 @@
 import 'package:child_tracker/onboarding_screen.dart';
 import 'package:child_tracker/pages/home_page.dart';
+import 'package:child_tracker/pages/welcome.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,9 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: OnboardingScreen(),
-        theme: ThemeData(primarySwatch: Colors.deepPurple),
+      debugShowCheckedModeBanner: false,
+      home: Welcome(),
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
     );
   }
 }

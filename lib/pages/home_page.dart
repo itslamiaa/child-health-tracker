@@ -24,6 +24,8 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  // side menu icon
+
                   // name
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -190,7 +192,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(height: 12,),
+            SizedBox(height: 12),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 1.0),

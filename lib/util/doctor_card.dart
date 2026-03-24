@@ -25,9 +25,9 @@ class DoctorCard extends StatelessWidget {
               Text('4,9',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16))]),
             SizedBox(height: 10,),
             //doc name
-            Text('Dr.Meguireche Lamia',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
+            Text('Dr.Dante',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
             // doc title
-            Text('therapist'),
+            Text('hunter'),
           ],
         ),
       ),
