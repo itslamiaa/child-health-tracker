@@ -1,3 +1,4 @@
+import 'package:child_tracker/pages/home_page.dart';
 import 'package:child_tracker/pages/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -144,18 +145,26 @@ class Login extends StatelessWidget {
               // login button
               Opacity(
                 opacity: 0.70,
-                child: Container(
-                  alignment: Alignment(0, 0),
-                  width: 200,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    color: Colors.pink[100],
-                  ),
-                  child: Text(
-                    'Login',
-                    style: GoogleFonts.poppins(
-                      textStyle: TextStyle(fontSize: 20),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (c) => HomePage()),
+                    );
+                  },
+                  child: Container(
+                    alignment: Alignment(0, 0),
+                    width: 200,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.pink[100],
+                    ),
+                    child: Text(
+                      'Login',
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(fontSize: 20),
+                      ),
                     ),
                   ),
                 ),
