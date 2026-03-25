@@ -44,7 +44,7 @@ class Welcome extends StatelessWidget {
               ),
               SizedBox(height: 55),
               // another image
-              Image.asset('assets/images/smiley.jpg', height: 250),
+              Image.asset('assets/images/baby.jpg', height: 240),
 
               SizedBox(height: 75),
 

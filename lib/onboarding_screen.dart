@@ -1,7 +1,7 @@
 import 'package:child_tracker/intro_screens/page_1.dart';
 import 'package:child_tracker/intro_screens/page_2.dart';
 import 'package:child_tracker/intro_screens/page_3.dart';
-import 'package:child_tracker/pages/home_page.dart';
+import 'package:child_tracker/pages/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -14,7 +14,7 @@ class OnboardingScreen extends StatefulWidget {
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
   // controller to keep track of what page we're one
-  PageController _controller = PageController();
+  late PageController _controller = PageController();
 
   // keep track if we're on the last page or not
   bool onLastPage = false;
@@ -60,7 +60,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return HomePage();
+                                return Welcome();
                               },
                             ),
                           );
