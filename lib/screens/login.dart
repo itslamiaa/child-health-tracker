@@ -1,5 +1,5 @@
-import 'package:child_tracker/pages/home_page.dart';
-import 'package:child_tracker/pages/signup.dart';
+import 'package:child_tracker/screens//home_page.dart';
+import 'package:child_tracker/screens//signup.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

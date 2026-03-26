@@ -1,7 +1,7 @@
 import 'package:child_tracker/intro_screens/page_1.dart';
 import 'package:child_tracker/intro_screens/page_2.dart';
 import 'package:child_tracker/intro_screens/page_3.dart';
-import 'package:child_tracker/pages/welcome.dart';
+import 'package:child_tracker/screens//welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
