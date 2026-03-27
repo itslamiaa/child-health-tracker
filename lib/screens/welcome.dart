@@ -44,7 +44,7 @@ class Welcome extends StatelessWidget {
               ),
               SizedBox(height: 55),
               // another image
-              Image.asset('assets/images/baby.jpg', height: 240),
+              Image.asset('assets/images/baby.png', height: 240),
 
               SizedBox(height: 75),
 
@@ -56,8 +56,11 @@ class Welcome extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (c) => // the arrow plays as a return
-                            Signup(), // i can name c or whatever the fuck i want bitches
+                        builder:
+                            (
+                              c,
+                            ) => // the arrow plays as a return // i can name c or whatever the fuck i want bitches
+                                Signup(),
                       ),
                     );
                   },
@@ -78,7 +81,6 @@ class Welcome extends StatelessWidget {
                   ),
                 ),
               ),
-
               SizedBox(height: 25),
               // login button
               Opacity(
@@ -88,8 +90,9 @@ class Welcome extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (c) => // the arrow plays as a return
-                        Login(), // i can name c or whatever the fuck i want bitches
+                        builder:
+                            (c) => // the arrow plays as a return
+                                Login(), // i can name c or whatever the fuck i want bitches
                       ),
                     );
                   },

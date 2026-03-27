@@ -5,9 +5,13 @@ class Page1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.yellow[100],
-      child: Center(child: Text('page 1')),
+    return Scaffold(
+      backgroundColor: Colors.yellow[100],
+      body: Column(
+        children: [
+          SizedBox(height:100 ,),
+          Image.asset('assets/images/megaphone.png',height: 100)],
+      )
     );
   }
 }
