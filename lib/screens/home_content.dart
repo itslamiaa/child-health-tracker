@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:child_tracker/util/category_card.dart';
 import 'package:child_tracker/util/doctor_card.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeContent extends StatefulWidget {
   const HomeContent({super.key});
@@ -21,7 +22,6 @@ class _HomeContentState extends State<HomeContent> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  //app bar
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 25.0),
                     child: Row(
@@ -34,7 +34,7 @@ class _HomeContentState extends State<HomeContent> {
                           children: [
                             Text(
                               'Hello,',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -42,7 +42,7 @@ class _HomeContentState extends State<HomeContent> {
                             SizedBox(height: 2),
                             Text(
                               'Lamia',
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -96,7 +96,7 @@ class _HomeContentState extends State<HomeContent> {
                               children: [
                                 Text(
                                   'How does your infant feel?',
-                                  style: TextStyle(
+                                  style: GoogleFonts.poppins(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
                                   ),
@@ -104,7 +104,7 @@ class _HomeContentState extends State<HomeContent> {
                                 SizedBox(height: 12),
                                 Text(
                                   'Add your child right now',
-                                  style: TextStyle(fontSize: 15),
+                                  style: GoogleFonts.poppins(fontSize: 15),
                                 ),
                                 SizedBox(height: 12),
                                 Container(
@@ -116,7 +116,7 @@ class _HomeContentState extends State<HomeContent> {
                                   child: Center(
                                     child: Text(
                                       'Get started',
-                                      style: TextStyle(color: Colors.white),
+                                      style: GoogleFonts.poppins(color: Colors.white),
                                     ),
                                   ),
                                 ),
@@ -136,14 +136,14 @@ class _HomeContentState extends State<HomeContent> {
                       children: [
                         Text(
                           'Children List',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         Text(
                           'See all',
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontSize: 16,
                             color: Colors.grey[500],
                             fontWeight: FontWeight.bold,
