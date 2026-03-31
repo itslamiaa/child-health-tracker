@@ -1,4 +1,3 @@
-import 'package:child_tracker/intro_screens/page_1.dart';
 import 'package:child_tracker/screens/home_content.dart';
 import 'package:child_tracker/screens/profile.dart';
 import 'package:child_tracker/screens/settings.dart';
@@ -13,12 +12,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
-  List <Widget> _pages = [HomeContent(), Profile(), Settings(),Page1()];
+  List <Widget> _pages = [HomeContent(), Profile(), Settings(),Settings(),Settings()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
+      backgroundColor: Color(0xffffff),
       // navigation bar
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -30,16 +29,20 @@ class _HomePageState extends State<HomePage> {
               icon: Image.asset('assets/icons/home.png',height: 20),
               label: 'home'),
           BottomNavigationBarItem(
-            icon: Image.asset('assets/icons/user.png',height: 20,),
+            icon: Image.asset('assets/icons/notes.png',height: 20,),
+            label: 'log',
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('assets/icons/add.png',height: 20,),
             label: 'Children List',
           ),
           BottomNavigationBarItem(
-            icon: Image.asset('assets/icons/settings.png',height: 20,),
-            label: 'settings',
+            icon: Image.asset('assets/icons/calendar.png',height: 20,),
+            label: 'Appointments',
           ),
           BottomNavigationBarItem(
-            icon: Image.asset('assets/icons/menu-burger.png',height: 20,),
-            label: 'profile',
+            icon: Image.asset('assets/icons/settings.png',height: 20,),
+            label: 'Settings',
           ),
 
         ],

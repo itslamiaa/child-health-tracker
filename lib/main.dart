@@ -1,4 +1,5 @@
 import 'package:child_tracker/intro_screens/onboarding_screen.dart';
+import 'package:child_tracker/screens/home_page.dart';
 import 'package:child_tracker/screens/splash.dart';
 import 'package:child_tracker/screens/welcome.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Splash(),
+      home: HomePage(),
       theme: ThemeData(primarySwatch: Colors.deepPurple),
     );
   }

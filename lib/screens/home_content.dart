@@ -95,7 +95,7 @@ class _HomeContentState extends State<HomeContent> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'How do you feel?',
+                                  'How does your infant feel?',
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
@@ -103,7 +103,7 @@ class _HomeContentState extends State<HomeContent> {
                                 ),
                                 SizedBox(height: 12),
                                 Text(
-                                  'Fill out your medical card right now',
+                                  'Add your child right now',
                                   style: TextStyle(fontSize: 15),
                                 ),
                                 SizedBox(height: 12),
@@ -127,51 +127,6 @@ class _HomeContentState extends State<HomeContent> {
                       ),
                     ),
                   ),
-
-                  SizedBox(height: 25),
-
-                  // search bar
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                    child: Container(
-                      padding: EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: Colors.deepPurple[200],
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.search),
-                          border: InputBorder.none,
-                          hintText: 'How can we help you?',
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  SizedBox(height: 25),
-                  //categories
-                  Container(
-                    height: 80,
-                    child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      children: [
-                        CategoryCard(
-                          iconPath: 'assets/icons/home.png',
-                          categoryName: 'Home',
-                        ),
-                        CategoryCard(
-                          iconPath: 'assets/icons/add.png',
-                          categoryName: 'Add child',
-                        ),
-                        CategoryCard(
-                          iconPath: 'assets/icons/settings.png',
-                          categoryName: 'settings',
-                        ),
-                      ],
-                    ),
-                  ),
-
                   SizedBox(height: 25),
                   //another cards  doctor list
                   Padding(
@@ -180,7 +135,7 @@ class _HomeContentState extends State<HomeContent> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Doctor List',
+                          'Children List',
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -195,17 +150,6 @@ class _HomeContentState extends State<HomeContent> {
                           ),
                         ),
                       ],
-                    ),
-                  ),
-                  SizedBox(height: 12),
-                  SizedBox(
-                    height: 230,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 1.0),
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: [DoctorCard(), DoctorCard(), DoctorCard()],
-                      ),
                     ),
                   ),
                   SizedBox(height: 50),
