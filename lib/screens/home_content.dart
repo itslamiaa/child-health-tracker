@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:child_tracker/util/category_card.dart';
-import 'package:child_tracker/util/doctor_card.dart';
+//import 'package:child_tracker/util/category_card.dart';
+//import 'package:child_tracker/util/doctor_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeContent extends StatefulWidget {
@@ -116,7 +116,9 @@ class _HomeContentState extends State<HomeContent> {
                                   child: Center(
                                     child: Text(
                                       'Get started',
-                                      style: GoogleFonts.poppins(color: Colors.white),
+                                      style: GoogleFonts.poppins(
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                 ),
