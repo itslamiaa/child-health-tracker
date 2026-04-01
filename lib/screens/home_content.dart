@@ -1,3 +1,4 @@
+import 'package:child_tracker/util/child_card.dart';
 import 'package:flutter/material.dart';
 //import 'package:child_tracker/util/category_card.dart';
 //import 'package:child_tracker/util/doctor_card.dart';
@@ -14,152 +15,165 @@ class _HomeContentState extends State<HomeContent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
-      body: Column(
-        children: [
-          SafeArea(
-            // safeArea makes text be visible not too high
-            child: SingleChildScrollView(
-              child: Column(
+      backgroundColor: Colors.transparent,
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        centerTitle: true,
+        leading: Icon(Icons.menu),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+
+      body: SafeArea(
+        // safeArea makes text be visible not too high
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        // side menu icon
-                        // name
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Hello,',
-                              style: GoogleFonts.poppins(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(height: 2),
-                            Text(
-                              'Lamia',
-                              style: GoogleFonts.poppins(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
+                  // side menu icon
+                  // name
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Hello,',
+                        style: GoogleFonts.poppins(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
-                        // profile
-                        Container(
-                          padding: EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            color: Colors.deepPurple[100],
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Icon(Icons.person),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  SizedBox(height: 25),
-
-                  // card -> how do you feel?
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                    child: Container(
-                      // split in two
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Colors.pink[100],
-                        borderRadius: BorderRadius.circular(12),
                       ),
-                      child: Row(
+                      SizedBox(height: 2),
+                      Text(
+                        'User',
+                        style: GoogleFonts.poppins(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  // profile
+                  Container(
+                    padding: EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: Colors.deepPurple[100],
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Icon(Icons.person),
+                  ),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 25),
+
+            // card -> how do you feel?
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Container(
+                // split in two
+                padding: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: Colors.pink[100],
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Row(
+                  children: [
+                    //animation or picture
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                      child: Container(
+                        height: 100,
+                        width: 100,
+                        color: Colors.deepPurple[200],
+                      ),
+                    ),
+                    SizedBox(width: 25),
+
+                    // how do you feel + button
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          //animation or picture
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 25.0,
-                            ),
-                            child: Container(
-                              height: 100,
-                              width: 100,
-                              color: Colors.deepPurple[200],
+                          Text(
+                            'How does your infant feel today?',
+                            style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
                             ),
                           ),
-                          SizedBox(width: 25),
-
-                          // how do you feel + button
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'How does your infant feel today?',
-                                  style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 15,
-                                  ),
-                                ),
-                                SizedBox(height: 12),
-                                Text(
-                                  'Add your child right now',
-                                  style: GoogleFonts.poppins(fontSize: 15),
-                                ),
-                                SizedBox(height: 12),
-                                Container(
-                                  padding: EdgeInsets.all(12),
-                                  decoration: BoxDecoration(
-                                    color: Colors.deepPurple[300],
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                  child: Center(
-                                    child: Text(
-                                      'Get started',
-                                      style: GoogleFonts.poppins(
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
+                          SizedBox(height: 12),
+                          Text(
+                            'Add your child right now',
+                            style: GoogleFonts.poppins(fontSize: 15),
+                          ),
+                          SizedBox(height: 12),
+                          Container(
+                            padding: EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: Colors.deepPurple[300],
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'Get started',
+                                style: GoogleFonts.poppins(color: Colors.white),
+                              ),
                             ),
                           ),
                         ],
                       ),
                     ),
-                  ),
-                  SizedBox(height: 25),
-                  //another cards  doctor list
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Children List',
-                          style: GoogleFonts.poppins(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          'See all',
-                          style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            color: Colors.grey[500],
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 25),
+            //another cards  children list
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Children List',
+                    style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 50),
+                  Text(
+                    'See all',
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      color: Colors.grey[500],
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ],
               ),
             ),
-          ),
-        ],
+            SizedBox(height: 20),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: ListView(
+                  children: [
+                    ChildCard(child: 'child 1',),
+                    ChildCard(child: 'child 2',),
+                    ChildCard(child: 'child 3',),
+                    ChildCard(child: 'child 4',),
+                    ChildCard(child: 'child 5',),
+                    ChildCard(child: 'child 6',),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
