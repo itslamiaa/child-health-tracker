@@ -95,10 +95,10 @@ class _HomeContentState extends State<HomeContent> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'How does your infant feel?',
+                                  'How does your infant feel today?',
                                   style: GoogleFonts.poppins(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 16,
+                                    fontSize: 15,
                                   ),
                                 ),
                                 SizedBox(height: 12),
