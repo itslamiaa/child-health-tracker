@@ -1,5 +1,8 @@
+import 'package:child_tracker/screens/home_page.dart';
+import 'package:child_tracker/screens/settings.dart';
 import 'package:child_tracker/util/child_card.dart';
 import 'package:flutter/material.dart';
+
 //import 'package:child_tracker/util/category_card.dart';
 //import 'package:child_tracker/util/doctor_card.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,10 +21,84 @@ class _HomeContentState extends State<HomeContent> {
       backgroundColor: Colors.transparent,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        /*scrolledUnderElevation: 0, // to remove shadow when scrolling listview
         centerTitle: true,
-        leading: Icon(Icons.menu),
+        leading: Icon(Icons.menu),*/
         backgroundColor: Colors.transparent,
-        elevation: 0,
+        //elevation: 0,
+      ),
+      drawer: Drawer(
+        child: Container(
+          color: Color(0xFFd5c0f0),
+          child: ListView(
+            children: [
+              DrawerHeader(
+                child: Center(
+                  child: Text(
+                    'L O G O',
+                    style: GoogleFonts.poppins(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              ListTile(
+                leading: Image.asset('assets/icons/home.png', height: 20),
+                title: Text(
+                  'Home Page',
+                  style: GoogleFonts.poppins(fontSize: 18),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
+                },
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                leading: Image.asset('assets/icons/settings.png', height: 20),
+                title: Text(
+                  'Settings',
+                  style: GoogleFonts.poppins(fontSize: 18),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Settings()),
+                  );
+                },
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                leading: Image.asset('assets/icons/girl.png', height: 20),
+                title: Text(
+                  'Children List',
+                  style: GoogleFonts.poppins(fontSize: 18),
+                ),
+                onTap: () {
+                  Navigator.of(
+                    context,
+                  ).push(MaterialPageRoute(builder: (context) => HomePage()));
+                },
+              ),
+              SizedBox(height: 10),
+              ListTile(
+                leading: Image.asset('assets/icons/user.png', height: 20),
+                title: Text(
+                  'About Us',
+                  style: GoogleFonts.poppins(fontSize: 18),
+                ),
+                onTap: () {
+                  Navigator.of(
+                    context,
+                  ).push(MaterialPageRoute(builder: (context) => HomePage()));
+                },
+              ),
+            ],
+          ),
+        ),
       ),
 
       body: SafeArea(
@@ -145,14 +222,6 @@ class _HomeContentState extends State<HomeContent> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text(
-                    'See all',
-                    style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      color: Colors.grey[500],
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
                 ],
               ),
             ),
@@ -162,12 +231,12 @@ class _HomeContentState extends State<HomeContent> {
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: ListView(
                   children: [
-                    ChildCard(child: 'child 1',),
-                    ChildCard(child: 'child 2',),
-                    ChildCard(child: 'child 3',),
-                    ChildCard(child: 'child 4',),
-                    ChildCard(child: 'child 5',),
-                    ChildCard(child: 'child 6',),
+                    ChildCard(child: 'child 1'),
+                    ChildCard(child: 'child 2'),
+                    ChildCard(child: 'child 3'),
+                    ChildCard(child: 'child 4'),
+                    ChildCard(child: 'child 5'),
+                    ChildCard(child: 'child 6'),
                   ],
                 ),
               ),

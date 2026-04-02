@@ -18,12 +18,41 @@ class _HomePageState extends State<HomePage> {
     LogTrack(),
     Settings(),
     Settings(),
-    Settings(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      /*drawer: Drawer(
+        child: Container(
+          color: Color(0xFFd5c0f0),
+          child: ListView(
+            children: [
+              /*DrawerHeader(
+                child: Text(
+                  'Menu',
+                  style: GoogleFonts.poppins(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),*/
+              ListTile(
+                leading: Image.asset('assets/icons/home.png', height: 20),
+                title: Text(
+                  'Home Page',
+                  style: GoogleFonts.poppins(
+                    fontSize: 18,
+                  ),
+                ),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomeContent(),));
+                },
+              ),
+            ],
+          ),
+        ),
+      ),*/
       // navigation bar
       body: Container(
         decoration: BoxDecoration(
@@ -39,13 +68,13 @@ class _HomePageState extends State<HomePage> {
         child: SafeArea(child: _pages[_currentIndex]),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
         selectedItemColor: Colors.deepPurple,
         // <-- ADDED: selected color
         unselectedItemColor: Colors.black,
         selectedLabelStyle: GoogleFonts.poppins(),
         // <-- ADDED: unselected color
         items: [
+        //home
           BottomNavigationBarItem(
             icon: Image.asset(
               'assets/icons/home.png',
@@ -59,6 +88,7 @@ class _HomePageState extends State<HomePage> {
             ),
             label: 'home',
           ),
+          //log
           BottomNavigationBarItem(
             icon: Image.asset('assets/icons/notes.png', height: 20),
             activeIcon: Image.asset(
@@ -69,6 +99,7 @@ class _HomePageState extends State<HomePage> {
 
             label: 'log',
           ),
+          // add child
           BottomNavigationBarItem(
             icon: Image.asset('assets/icons/add.png', height: 20),
             activeIcon: Image.asset(
@@ -79,6 +110,7 @@ class _HomePageState extends State<HomePage> {
 
             label: 'Add Child',
           ),
+          //appointments
           BottomNavigationBarItem(
             icon: Image.asset('assets/icons/calendar.png', height: 20),
             activeIcon: Image.asset(
@@ -89,21 +121,13 @@ class _HomePageState extends State<HomePage> {
 
             label: 'Appointments',
           ),
-          BottomNavigationBarItem(
-            icon: Image.asset('assets/icons/settings.png', height: 20),
-            activeIcon: Image.asset(
-              'assets/icons/settings.png',
-              height: 20,
-              color: Colors.deepPurple,
-            ),
-            label: 'Settings',
-          ),
         ],
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
             _currentIndex = index;
-          });
+          }
+          );
         },
       ),
     );
