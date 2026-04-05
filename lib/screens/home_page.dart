@@ -37,6 +37,7 @@ class _HomePageState extends State<HomePage> {
         ),
         child: SafeArea(child: _pages[_currentIndex]),
       ),
+
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.deepPurple,
         type: BottomNavigationBarType.fixed,

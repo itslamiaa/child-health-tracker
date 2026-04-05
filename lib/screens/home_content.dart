@@ -22,11 +22,11 @@ class _HomeContentState extends State<HomeContent> {
       backgroundColor: Colors.transparent,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        /*scrolledUnderElevation: 0, // to remove shadow when scrolling listview
-        centerTitle: true,
+        scrolledUnderElevation: 0, // to remove shadow when scrolling listview
+        /*centerTitle: true,
         leading: Icon(Icons.menu),*/
         backgroundColor: Colors.transparent,
-        //elevation: 0,
+        elevation: 0,
       ),
       drawer: Drawer(
         child: Container(
@@ -136,7 +136,7 @@ class _HomeContentState extends State<HomeContent> {
                   // profile
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (c)=>UserProfile()));
+                      Navigator.push(context, MaterialPageRoute(builder: (c)=> UserProfile()));
                     },
                     child: Container(
                       padding: EdgeInsets.all(12),
