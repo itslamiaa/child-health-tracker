@@ -1,5 +1,6 @@
 import 'package:child_tracker/screens/home_page.dart';
 import 'package:child_tracker/screens/settings.dart';
+import 'package:child_tracker/screens/user_profile.dart';
 import 'package:child_tracker/util/child_card.dart';
 import 'package:flutter/material.dart';
 
@@ -133,13 +134,18 @@ class _HomeContentState extends State<HomeContent> {
                     ],
                   ),
                   // profile
-                  Container(
-                    padding: EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: Colors.deepPurple[100],
-                      borderRadius: BorderRadius.circular(20),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (c)=>UserProfile()));
+                    },
+                    child: Container(
+                      padding: EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.deepPurple[100],
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Icon(Icons.person),
                     ),
-                    child: Icon(Icons.person),
                   ),
                 ],
               ),

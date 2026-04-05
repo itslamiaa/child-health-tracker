@@ -23,36 +23,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      /*drawer: Drawer(
-        child: Container(
-          color: Color(0xFFd5c0f0),
-          child: ListView(
-            children: [
-              /*DrawerHeader(
-                child: Text(
-                  'Menu',
-                  style: GoogleFonts.poppins(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),*/
-              ListTile(
-                leading: Image.asset('assets/icons/home.png', height: 20),
-                title: Text(
-                  'Home Page',
-                  style: GoogleFonts.poppins(
-                    fontSize: 18,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomeContent(),));
-                },
-              ),
-            ],
-          ),
-        ),
-      ),*/
       // navigation bar
       body: Container(
         decoration: BoxDecoration(
@@ -69,10 +39,11 @@ class _HomePageState extends State<HomePage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.deepPurple,
-        // <-- ADDED: selected color
+        type: BottomNavigationBarType.fixed,
         unselectedItemColor: Colors.black,
         selectedLabelStyle: GoogleFonts.poppins(),
-        // <-- ADDED: unselected color
+        unselectedLabelStyle: GoogleFonts.poppins(),
+        backgroundColor: Colors.blue.shade50,
         items: [
         //home
           BottomNavigationBarItem(
